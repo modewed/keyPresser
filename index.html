@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.wraper{
+			width: 100%
+		}
+		.center{
+			position: absolute;
+			background: red;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wraper">
+		<div class="center" id="target">
+			
+		</div>
+	</div>
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <script type="text/javascript">
+  	let left = 0
+  	$( "body" ).keydown(function(event) {
+  		console.log(event.which);
+  		if (event.which == 37) {
+  			left -=100;
+			$("#target")[0].style.left = left + 'px';
+  		} else if(event.which == 39){
+  			left +=100;
+			$("#target")[0].style.left = left + 'px';
+  		}
+	});
+  </script>
+</body>
+</html>
